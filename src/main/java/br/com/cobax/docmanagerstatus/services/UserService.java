@@ -43,11 +43,6 @@ public class UserService {
 		
 		List<ViewUserDTO> lista = new ArrayList<>();
 		lista = listUser.stream().map(ViewUserDTO::new).collect(Collectors.toList());
-//		
-//		listUser.stream().map(user -> {
-//			return new ViewUserDTO(user);
-//		});
-		
 		return ResponseEntity.ok().body(lista);
 	}
 	
